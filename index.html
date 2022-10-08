@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>AllMovies</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <body onload="loadMovieList('now_playing')">
+    <section id="page__loader">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <section id="page__loaded">
+      <header>
+        <h1>All<span>Movies</span></h1>
+        <div class="search__input">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            id="movie__search"
+            name="q"
+            placeholder="Busque por um filme"
+          />
+        </div>
+        <nav>
+          <div class="page__link__container">
+            <button class="button__small__outline">
+              <span>Lançamentos</span>
+            </button>
+            <button class="button__small__outline">
+              <span>Em Destaque</span>
+            </button>
+            <button class="button__small__outline">
+              <span>Avaliações</span>
+            </button>
+            <button class="button__small__outline">
+              <span>Entrevistas</span>
+            </button>
+            <button class="button__small__outline">
+              <span>Novidades</span>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h2>Filmes Novos</h2>
+        <div id="movie__placeholder"></div>
+        <div id="carousel"></div>
+        <div id="movie__info">
+          <div class="movie__info__casting">
+            <h3>Diretor</h3>
+            <span>Nome do diretor</span>
+          </div>
+          <div class="movie__info__casting">
+            <h3>Roteirista</h3>
+            <span>Nome do roteirista</span>
+          </div>
+          <div class="movie__info__actors">
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+            <span>Nome do ator</span>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script defer src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #556ee6;
+  --primary-medium: #556ee6;
+  --white: #fff;
+  --background: #222736;
+  --background--medium: #262b3c;
+  --background--light: #2a3042;
+  --success: #34c38f;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: var(--background--light);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin: 0 1em;
+}
+
+.align__right {
+  text-align: right;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+h1 span {
+  font-size: 48px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+p,
+span {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.search__input {
+  width: 100%;
+  background: white;
+  border-radius: 1em;
+  padding: 0.25em;
+  margin-top: 0.5em;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  all: unset;
+}
+
+.search__input input {
+  border: none;
+  -webkit-appearance: none;
+}
+
+.search__input i {
+  color: black;
+  padding: 0 0.5em;
+}
+
+.page__link__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1em;
+}
+
+.page__link__container button {
+  margin-bottom: 0.5em;
+}
+
+.button__small__outline {
+  border-radius: 0.15em;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+}
+.button__small__outline:hover {
+  border: 1px solid white;
+  cursor: var(--primary);
+}
+.button__small__outline:active {
+  background: var(--primary);
+}
+.button__medium {
+}
+
+.button__large {
+}
+
+main {
+  margin-top: 1em;
+}
+
+main h2 {
+  margin-bottom: 0.5em;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    display: block;
+  }
+}
+
+#movie__placeholder iframe {
+  width: 100%;
+  min-height: 300px;
+  height: 50vh;
+  border: none;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.component__hide,
+.component__hide__movie {
+  display: none !important;
+  visibility: hidden;
+}
+
+.component__show,
+.component__show__movie {
+  display: block;
+  visibility: visible;
+}
+
+#carousel {
+  margin-top: 0.5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#carousel i:hover {
+  cursor: pointer;
+}
+
+#page__loader {
+  margin-top: 50vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.movie__info__header__primary {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.movie__info__header__secundary {
+  font-weight: 200;
+  padding-bottom: 1em;
+  padding-right: 0.1em;
+  display: block;
+}
+
+.movie__info__description {
+  width: 100%;
+  font-weight: 300;
+}
+
+.movie__info__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie__info__casting {
+  margin-top: 1em;
+}
+
+.movie__info__actors {
+  margin-top: 1em;
+}
+
+.movie__info__actors div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 420px) {
+  .movie__info__actors div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .movie__info__actors div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  iframe {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .movie__info__actors div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
